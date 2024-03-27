@@ -1,0 +1,79 @@
+<template>
+	<section class="footer ubuntu-regular">
+		<footer class="footer-links">
+			<div class="footer-body">
+				<NuxtLink to="/" @click="store.getLink('index')">Главная</NuxtLink>
+				<NuxtLink to="/industry" @click="store.getLink('industry')">Промышленность</NuxtLink>
+				<NuxtLink to="/districts" @click="store.getLink('districts')">Районы Норильска</NuxtLink>
+				<NuxtLink to="/nature" @click="store.getLink('nature')">Природа</NuxtLink>
+				<div class="logo">@ Асан Шабатыров</div>
+			</div>
+		</footer>
+	</section>
+</template>
+
+<style lang="less" scoped>
+.footer {
+	border-top: 1px solid #fff;
+	background: rgb(9, 9, 19);
+
+	& .footer-links {
+
+    & .footer-body {
+			padding: 0px 200px;
+			padding-top: 30px;
+
+			& > a {
+				margin-bottom: 30px;
+				color: rgb(255, 255, 255);
+				display: block;
+        width: 150px;
+				font-size: 15px;
+        white-space: nowrap; 
+        border-radius: 30px;
+				position: relative;
+
+				&::before {
+					content: '';
+					background: #fff;
+					width: 0px;
+					height: 1.5px;
+					position: absolute;
+					bottom: -2px;
+					transition: width 0.5s;
+				}
+				&:hover::before {
+					width: 100px; 
+				}
+
+				&:hover {
+					animation: bottomLine 1s forwards; 
+				}
+			}
+
+			& .logo {
+				padding-bottom: 10px;
+				text-align: center;
+				font-size: 12px;
+				color: rgb(117, 116, 116);
+			}
+		}
+	}
+}
+
+@keyframes bottomLine {
+	0% {
+		width: 0px;
+	}
+	100% {
+		width: 100%;
+	}
+}
+</style>
+
+
+<script setup>
+  import { useActiveLinkStore } from "@/stores/activeLinkStore";
+
+	const store = useActiveLinkStore();
+</script>
