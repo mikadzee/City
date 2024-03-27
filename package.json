@@ -1,4 +1,5 @@
 {
+  "build-vercel": "NITRO_PRESET=vercel-edge nuxt build",
   "name": "nuxt-app",
   "private": true,
   "type": "module",
