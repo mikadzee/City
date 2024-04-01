@@ -4,7 +4,7 @@
 
 			<div class="about-info" data-aos="fade-up">
 				<img src="@/assets/images/norilsk-industry-4.jpeg" alt="">
-				<p><span>Норильск</span> - это уникальный город, расположенный за Полярным кругом в Красноярском крае Российской Федерации. Это один из самых крупных городов в Арктической зоне и десятый по величине город за Уралом по численности населения. Норильск известен своими природными ресурсами и является центром одной из крупнейших в мире горнодобывающих и металлургических компаний — Норникеля, специализирующейся на добыче никеля, меди и платиновых металлов.</p>
+				<p><span>Норильск</span> - это один из самых крупных городов в Арктической зоне и десятый по величине город за Уралом по численности населения. Норильск известен своими природными ресурсами и является центром одной из крупнейших в мире горнодобывающих и металлургических компаний — Норникеля, специализирующейся на добыче никеля, меди и платиновых металлов.</p>
 			</div>
 
 			
@@ -137,26 +137,50 @@
 <style lang="less" scoped>
 .about {
 	& .about-body {
-		padding: 50px 100px;
+		padding: 50px 0px;
 		
+		// @media (max-width: 1000px) {
+		// 	position: relative;
+		// 	left: 50%;
+		// 	top: 50%;
+			
+		// }
 		& .about-info {
 			margin: 50px auto;
 			display: flex;
-			align-items: center;
 			
+			@media (max-width: 1200px) {
+			}
 			& > img {
 				width: 550px;
+				height: 490px;
+				
+				// @media (max-width: 1200px) {
+				// 	width: 100vh;
+				// 	padding: 10px;
+				// }
+				// @media (max-width: 500px) {
+				// 	width: 80vh;
+				// 	padding: 10px;
+				// }
 			}
+			
 			& > p {
+				margin: 0 30px;
 				font-size: 18px; 
   			line-height: 1.6;
-  			max-width: 600px; 
-  			margin: 0 auto;
-				
+				min-width: 600px;
+
 				& > span {
 					font-size: 34px;
 				  font-weight: bold;
 				}
+				
+				// @media (max-width: 1200px) {
+				// 	width: 100vh;
+				// 	height: 500px;
+				// 	padding: 40px 0px;
+				// }
 			}
 		}
 
@@ -172,7 +196,6 @@
 			& .municipal-services-content {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: space-between;
 
 				& .municipal-service {
 					padding: 10px 0px;
@@ -180,7 +203,6 @@
 					display: flex;
 					border-radius: 5px;
 					background: #3735cb16;
-					flex-basis: calc(33.333% - 10px);
 					margin-bottom: 20px;
 					border: 1px solid #ffffff0e;
 					box-shadow: none;
@@ -208,12 +230,29 @@
 
 					}
 				}
+
+				@media (max-width: 1200px) {
+					width: 100vh;
+					& .municipal-service {
+						padding: 5px 0px;
+						margin: 10px 0px;
+						display: flex;
+						border-radius: 5px;
+						background: #3735cb16;
+						margin-bottom: 20px;
+						border: 1px solid #ffffff0e;
+						box-shadow: none;
+						cursor: pointer;
+						transition: all 0.5s ease;
+
+					}
+				}
 			}
 		}
 
 		& .history {
 			margin: 50px 0px;
-
+			
 			& > h2 {
 				margin-left: 20px;
 				margin-bottom: 40px;
@@ -324,7 +363,6 @@
 					display: flex;
 					border-radius: 5px;
 					background: #3735cb16;
-					flex-basis: calc(33.333% - 10px);
 					margin-bottom: 20px;
 					border: 1px solid #ffffff0e;
 					box-shadow: none;

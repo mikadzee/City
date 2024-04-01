@@ -1,16 +1,21 @@
 <template>
   <div class="scene ubuntu-regular">
     <canvas id="canvas"></canvas>
-    <h1 id="title">Норильск</h1>
+    <h1 id="title" >Норильск</h1>
   </div>
 </template>
 
-<style scoped>
+<style lang="less" scoped>
+
+
+
 *::after,
 *::before {
   box-sizing: border-box;
 }
-
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
@@ -25,37 +30,15 @@ body {
 }
 
 .scene {
-  
+  padding-top: 50%;
   position: relative;
   width: 100%;
-  padding-top: 50%;
   background-image: url('../assets/images/norilsk-main-1.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  background-position: center;
   text-align: center;
-
-  @media (max-width: 768px) {
-    
-  }
-}
-
-.scene > h1 {
-  position: absolute;
-  top: 70%;
-  left: 0;
-  width: 100%;
-  font-size: clamp(3rem,11.4vw, 12rem);
-  color: rgb(108, 108, 230);
-  font-weight: 800;
-  text-transform: uppercase;
-  transition: margin 0.4s ease;
-
-  @media (max-width: 768px) {
-    font-size: clamp(2rem, 8vw, 4rem); /* Уменьшаем размер шрифта для мобильных */
-    top: 50%; /* Позиционируем заголовок по-другому */
-    transform: translateY(-50%); /* Центрируем заголовок */
-  }
 }
 
 .scene > canvas {
@@ -64,7 +47,21 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
+  
 }
+.scene > h1 {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  width: 100%;
+  font-size: clamp(5rem, 11.4vw, 12rem);
+  color: rgb(108, 108, 230);
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: margin 0.4s ease;
+
+}
+
 
 
 </style>
@@ -75,7 +72,6 @@ import image2 from "../assets/images/norilsk-industry-1.jpg";
 import image3 from "../assets/images/norilsk-industry-2.jpeg";
 import image4 from "../assets/images/norilsk-industry-6.jpg";
 
-
 const scene = [];
 let canvas;
 let ctx;
@@ -85,6 +81,8 @@ onMounted (() => {
   canvas = document.getElementById("canvas");
   ctx = canvas.getContext("2d");
 })
+
+
 //функция по созданибю картинок
 function loadImage(path, options) {
   return new Promise((resolve) => {

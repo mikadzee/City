@@ -36,17 +36,17 @@
 							:style="{
 								color: store.activeLink === 'districts' ? '#fff' : '#9CA3AF',
 							}"
-							>Районы Норильска</NuxtLink
+							>Районы</NuxtLink
 						>
 					</li>
 					<li>
 						<NuxtLink
-							to="/nature"
-							@click="store.getLink('nature')"
+							to="/works"
+							@click="store.getLink('works')"
 							:style="{
-								color: store.activeLink === 'nature' ? '#fff' : '#9CA3AF',
+								color: store.activeLink === 'works' ? '#fff' : '#9CA3AF',
 							}"
-							>Природа</NuxtLink
+							>Вакансии</NuxtLink
 						>
 					</li>
 				</ul>
@@ -66,32 +66,55 @@ onMounted(() => {
 
 <style lang="less" scoped>
 .header {
-	padding: 10px 0px;
-	position: absolute;
-	width: 100%;
-	z-index: 1000;
-	background-color: rgba(0, 0, 0, 0.549);
-	backdrop-filter: blur(10px);
+	position: relative;
 
+	@media (max-width: 528px) {
+
+	}
+	
 	& .header-body {
-		margin: 0px 100px;
-		display: flex;
-		align-items: center;
+		padding: 10px 0;
+  	position: fixed;
+  	width: 100%;
+  	backdrop-filter: blur(10px);
+  	z-index: 1000;
+  	background-color: rgba(0, 0, 0, 0.549);
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+		
+		@media (max-width: 528px) {
+			padding: 0px 0;
+		}
+		@media (max-width: 828px) {
+		}
+		
+		@media (max-width: 1000px) {
+			height: 70px;
 
-		@media (max-width: 768px) {
-    }
-
+		}
 		& .header-logo {
+			padding-left: 40px;
 			margin-right: auto;
 			overflow: hidden;
 
-			@media (max-width: 768px) {
-      }
 
 			& > a {
 				& > img {
 					border-radius: 10px;
 					width: 100px;
+
+					@media (max-width: 528px) {
+						width: 80px;
+
+					}
+					@media (max-width: 458px) {
+						width: 50px;
+						margin-right: 50px;
+					}
+					@media (max-width: 1200px) {
+
+					}
 				}
 			}
 		}
@@ -99,13 +122,19 @@ onMounted(() => {
 		& .nav {
 
 			@media (max-width: 768px) {
+
 			}
+			padding-right: 40px;
 			& .links {
 				display: flex;
 				gap: 30px;
 
 				& > li {
 					& > a {
+						
+						@media (max-width: 600px) {
+							font-size: 10px;
+						}
 					}
 				}
 		}

@@ -5,7 +5,7 @@
 				<NuxtLink to="/" @click="store.getLink('index')">Главная</NuxtLink>
 				<NuxtLink to="/industry" @click="store.getLink('industry')">Промышленность</NuxtLink>
 				<NuxtLink to="/districts" @click="store.getLink('districts')">Районы Норильска</NuxtLink>
-				<NuxtLink to="/nature" @click="store.getLink('nature')">Природа</NuxtLink>
+				<NuxtLink to="/works" @click="store.getLink('works')">Природа</NuxtLink>
 				<div class="logo">@ Асан Шабатыров</div>
 			</div>
 		</footer>
@@ -13,16 +13,29 @@
 </template>
 
 <style lang="less" scoped>
+
+body {
+
+}
 .footer {
 	border-top: 1px solid #fff;
-	background: rgb(9, 9, 19);
-
+	
 	& .footer-links {
+		background: rgb(9, 9, 19);
 
     & .footer-body {
 			padding: 0px 200px;
 			padding-top: 30px;
-
+			
+			@media (max-width: 500px) {
+				padding: 0px 50px;
+				padding-top: 20px;
+			}
+			@media (max-width: 800px) {
+				padding: 0px 50px;
+				padding-top: 20px;
+			}
+			
 			& > a {
 				margin-bottom: 30px;
 				color: rgb(255, 255, 255);
@@ -32,7 +45,14 @@
         white-space: nowrap; 
         border-radius: 30px;
 				position: relative;
+				
+				@media (max-width: 500px) {
+					margin-bottom: 20px;
+					width: 80px;
+					font-size: 13px;
 
+				}
+			
 				&::before {
 					content: '';
 					background: #fff;

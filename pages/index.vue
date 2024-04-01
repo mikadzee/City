@@ -10,8 +10,6 @@
 </template>
 
 <style scoped>
-  .main {
-  }
 </style>
 
 <script setup>

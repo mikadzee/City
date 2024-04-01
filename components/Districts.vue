@@ -91,6 +91,15 @@
 <style lang='less' scoped>
   .districts {
     padding: 100px 200px;
+    
+    @media (max-width: 800px) {
+      padding: 100px 100px;  
+    }
+
+    @media (max-width: 500px) {
+      padding: 100px 50px;
+      
+    }
     & .districts-head {
       display: flex;
       padding: 10px 10px;
@@ -105,8 +114,8 @@
         gap: 40px;
 
         & > h4 {
-          cursor: pointer;
           padding: 0;
+          cursor: pointer;
           transition: all 0.1s ease;
           border-bottom: 0px solid #00b3ff;
 

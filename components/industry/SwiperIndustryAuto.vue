@@ -76,4 +76,25 @@ const randomSlides = computed(() => {
     }
 	}
 }
+@media (max-width: 768px) {
+  .slider .slide {
+    overflow: none;
+    & > img {
+      width: 1000px;
+      height: 500px;
+    }
+    .content-slide {
+      padding: 0px 10px; /* Уменьшаем отступы */
+
+      > div {
+        > h2 {
+          font-size: 25px; /* Уменьшаем размер шрифта для заголовков */
+        }
+        > h3 {
+          font-size: 18px; /* Уменьшаем размер шрифта для подзаголовков */
+        }
+      }
+    }
+  }
+}
 </style>

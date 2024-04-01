@@ -7,27 +7,27 @@ export const useActiveLinkStore = defineStore({
 	}),
 	actions: {
 		initializeActiveLink() {
-			const route = useRoute();
+			const route = useRoute()
 			switch (route.path) {
 				case '/':
-					this.activeLink = 'index';
-					break;
+					this.activeLink = 'index'
+					break
 				case '/industry':
-					this.activeLink = 'industry';
-					break;
+					this.activeLink = 'industry'
+					break
 				case '/districts':
-					this.activeLink = 'districts';
-					break;
-				case '/nature':
-					this.activeLink = 'nature';
-					break;
+					this.activeLink = 'districts'
+					break
+				case '/works':
+					this.activeLink = 'works'
+					break
 				default:
-					this.activeLink = 'index';
-			};
+					this.activeLink = 'index'
+			}
 		},
 		getLink(link) {
-			this.activeLink = link;
-			console.log(this.activeLink);
+			this.activeLink = link
+			console.log(this.activeLink)
 		},
 	},
 })
