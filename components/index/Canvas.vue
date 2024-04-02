@@ -54,7 +54,7 @@ body {
   top: 70%;
   left: 0;
   width: 100%;
-  font-size: clamp(5rem, 11.4vw, 12rem);
+  font-size: 8vw;
   color: rgb(108, 108, 230);
   font-weight: 800;
   text-transform: uppercase;

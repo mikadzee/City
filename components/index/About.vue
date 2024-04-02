@@ -4,7 +4,7 @@
 
 			<div class="about-info" data-aos="fade-up">
 				<img src="@/assets/images/norilsk-industry-4.jpeg" alt="">
-				<p><span>Норильск</span> - это один из самых крупных городов в Арктической зоне и десятый по величине город за Уралом по численности населения. Норильск известен своими природными ресурсами и является центром одной из крупнейших в мире горнодобывающих и металлургических компаний — Норникеля, специализирующейся на добыче никеля, меди и платиновых металлов.</p>
+				<p><span>Норильск</span> - это один из самых крупных городов в Арктической зоне.Известен своими природными ресурсами и является центром одной из крупнейших в мире горнодобывающих и металлургических компаний — Норникеля.</p>
 			</div>
 
 			
@@ -152,8 +152,8 @@
 			@media (max-width: 1200px) {
 			}
 			& > img {
-				width: 550px;
-				height: 490px;
+				width: 40vw;
+				height: 40vw;
 				
 				// @media (max-width: 1200px) {
 				// 	width: 100vh;
@@ -167,9 +167,8 @@
 			
 			& > p {
 				margin: 0 30px;
-				font-size: 18px; 
   			line-height: 1.6;
-				min-width: 600px;
+				min-width: 150px;
 
 				& > span {
 					font-size: 34px;
@@ -200,21 +199,20 @@
 				& .municipal-service {
 					padding: 10px 0px;
 					margin: 10px 0px;
+					margin-bottom: 20px;
 					display: flex;
 					border-radius: 5px;
 					background: #3735cb16;
-					margin-bottom: 20px;
 					border: 1px solid #ffffff0e;
 					box-shadow: none;
 					cursor: pointer;
 					transition: all 0.5s ease;
 					
 					& .municipal-service-info {
-						flex-grow: 1;
 						
 						& > h2 {
 							padding: 10px;
-							font-size: 1.0rem;
+							font-size: 1rem;
 							min-width: 150px;
 						}
 
@@ -232,7 +230,6 @@
 				}
 
 				@media (max-width: 1200px) {
-					width: 100vh;
 					& .municipal-service {
 						padding: 5px 0px;
 						margin: 10px 0px;
