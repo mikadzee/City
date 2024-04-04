@@ -1,6 +1,6 @@
 <template>
 	<section class="works ubuntu-regular">
-		<h2>Нужные вакансии в Норильске</h2>
+		<h2>Работы в Норильске</h2>
 		<div class="body-works">
 			<div class="list-works">
 				<a v-for="info in randomWork" :href="info.url" class="work-link" target="_blank">
@@ -11,7 +11,7 @@
 					</div>
 				</a>
 			</div>
-			<a href="https://rabota1000.ru/norilsk" >Еще вакансии...</a>
+			<a href="https://rabota1000.ru/norilsk" >Еще...</a>
 		</div>
 
 		<div class="expensive-works">
@@ -34,6 +34,10 @@
   
   @media (max-width: 700px) {
     padding: 100px 20px;
+    
+  }
+	@media (max-width: 500px) {
+    padding: 50px 00px;
     
   }
 
@@ -165,87 +169,77 @@ const works = [
 	{
 		work: 'Инженер ПТО',
 		salary: '192 000 — 195 000 ₽/месяц',
-		url: 'https://norilsk.superjob.ru/vakansii/inzhener-pto-48732236.html',
+		url: 'https://norilsk.hh.ru/vacancies/inzhener_pto',
 	},
 	{
 		work: 'Программист',
 		salary: 'до 78 805 ₽ до вычета налогов',
-		url: 'https://norilsk.hh.ru/vacancy/91860722?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
-	},
-	{
-		work: 'Контроллер',
-		salary: 'от 42 000 ₽',
-		url: 'https://norilsk.hh.ru/vacancy/94907245?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/programmist',
 	},
 	{
 		work: 'Врач-педиатр',
 		salary: 'от 70 000 руб. до 100 000 руб.',
-		url: 'https://rabota1000.ru/vacancy/2426570',
+		url: 'https://norilsk.hh.ru/vacancies/pediatr',
 	},
 	{
 		work: 'Врач-психиатр',
 		salary: 'от 77 500 ₽ на руки',
-		url: 'https://norilsk.hh.ru/vacancy/95118165?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
-	},
-	{
-		work: 'Врач-невролог',
-		salary: 'от 35 000 руб. до 55 000 руб.',
-		url: 'https://rabota1000.ru/vacancy/143651891',
+		url: 'https://norilsk.hh.ru/vacancies/vrach-psihiatr',
 	},
 	{
 		work: 'Врач-хирург',
 		salary: 'от 100 000 ₽ до вычета налогов',
-		url: 'https://norilsk.hh.ru/vacancy/94306366?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/vrach-hirurg',
 	},
 	{
 		work: 'Врач-терапевт',
 		salary: 'от 140 000 ₽ до вычета налогов',
-		url: 'https://norilsk.hh.ru/vacancy/94308084?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/vrach_terapevt',
 	},
 	{
 		work: 'Электрослесарь',
-		salary: 'от 215 000 до 250 000 ₽ на руки',
-		url: 'https://norilsk.hh.ru/vacancy/94220820?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		salary: 'от 120 000 до 140 000 ₽ на руки',
+		url: 'https://norilsk.hh.ru/vacancies/elektroslesar',
 	},
 	{
 		work: 'Слесарь',
 		salary: 'от 80 000 ₽ на руки',
-		url: 'https://norilsk.hh.ru/vacancy/94510727?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/slesar',
 	},
 	{
-		work: 'Буровой мастер колонкового бурения',
-		salary: 'от 213 000 ₽',
-		url: 'https://norilsk.hh.ru/vacancy/94084475?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		work: 'Буровой мастер',
+		salary: 'от 143 000 ₽',
+		url: 'https://norilsk.hh.ru/vacancies/burovoj-master',
 	},
 	{
 		work: 'Курьер',
 		salary: 'от 80 000 до 150 000 ₽ на руки',
-		url: 'https://norilsk.hh.ru/vacancy/95011136?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/kurer',
 	},
 	{
 		work: 'Грузчик',
 		salary: 'от 50 000 ₽ на руки',
-		url: 'https://norilsk.hh.ru/vacancy/95395602?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/gruzchik',
 	},
 	{
 		work: 'Разнорабочий',
 		salary: 'Договорная',
-		url: 'https://norilsk.hh.ru/vacancy/94679611?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/raznorabochiy',
 	},
 	{
 		work: 'Горнорабочий',
 		salary: 'до 170 000 ₽ до вычета налогов',
-		url: 'https://norilsk.hh.ru/vacancy/94208969?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/gornorabochij',
 	},
 	{
 		work: 'Шахтный электрик',
 		salary: 'от 75 000 ₽ на руки',
-		url: 'https://norilsk.hh.ru/vacancy/94510962?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		url: 'https://norilsk.hh.ru/vacancies/elektrik',
 	},
 	{
 		work: 'Горный мастер',
-		salary: 'от 180 000 до 180 000 ₽ на руки',
-		url: 'https://norilsk.hh.ru/vacancy/95381065?utm_source=rabota1000.ru&utm_medium=ppc&utm_campaign=dm-aggregators-main_b2c-rf-paid_cpa_applicant_feed',
+		salary: 'от 180 000 до 280 000 ₽ на руки',
+		url: 'https://norilsk.hh.ru/vacancies/gornyy_master',
 	},
 ]
 const expensiveWorks = [

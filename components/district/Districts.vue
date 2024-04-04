@@ -37,7 +37,7 @@
         </div>
 
         <div class="district" data-aos="fade-up">  
-          <h3>Кайркан</h3>
+          <h3>Кайеркан</h3>
 
           <div class="district-info">
             <p>
@@ -93,16 +93,16 @@
     padding: 100px 200px;
     
     @media (max-width: 800px) {
-      padding: 100px 100px;  
+      padding: 100px 0px;
     }
-
+    
     @media (max-width: 500px) {
-      padding: 100px 50px;
+      padding: 50px 10px;  
       
     }
     & .districts-head {
-      display: flex;
       padding: 10px 10px;
+      display: flex;
       border-bottom: 1px solid #ffffffaf;
 
       & > h2 {
@@ -140,8 +140,8 @@
         width: 100%;
         
         & > iframe {
-          width: 100%; // Добавьте это свойство
-          height: 450px; // Вы можете задать высоту по желанию
+          width: 100%;
+          height: 450px;
           border: none;
         }
 
@@ -155,8 +155,8 @@
           margin-top: 50px;
 
           & > h3 {
-            font-size: 24px;
             margin-bottom: 10px;
+            font-size: 24px;
           }
 
           & .district-info {
@@ -165,10 +165,10 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.427);
 
             & > p {
+              margin-bottom: 10px;
               font-size: 16px;
               line-height: 1.6;
               text-align: justify;
-              margin-bottom: 10px;
             }
           }
         }

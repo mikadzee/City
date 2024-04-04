@@ -1,9 +1,6 @@
 <template>
   <main>
-    <Districts />  
+    <districtDistricts />  
   </main>
 
-  <footer>
-    <Footer />
-  </footer>
 </template>

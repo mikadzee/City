@@ -2,10 +2,22 @@
 	<section class="footer ubuntu-regular">
 		<footer class="footer-links">
 			<div class="footer-body">
-				<NuxtLink to="/" @click="store.getLink('index')">Главная</NuxtLink>
-				<NuxtLink to="/industry" @click="store.getLink('industry')">Промышленность</NuxtLink>
-				<NuxtLink to="/districts" @click="store.getLink('districts')">Районы Норильска</NuxtLink>
-				<NuxtLink to="/works" @click="store.getLink('works')">Природа</NuxtLink>
+				<div class="container-footer">
+					<div class="links-pages">
+						<NuxtLink to="/" @click="store.getLink('index')">Главная</NuxtLink>
+						<NuxtLink to="/industry" @click="store.getLink('industry')">Промышленность</NuxtLink>
+						<NuxtLink to="/districts" @click="store.getLink('districts')">Районы Норильска</NuxtLink>
+						<NuxtLink to="/works" @click="store.getLink('works')">Работы</NuxtLink>
+					</div>
+					<div class="contacts">
+						<ul>
+							<label>Контакты разработчика</label>
+							<li><a href="https://vk.com/sally2008">VK</a></li>
+							<li><a href="https://t.me/owervase">Telegram</a></li>
+							<li><a href="https://t.me/owervase">Telegram</a></li>
+						</ul>
+					</div>
+				</div>
 				<div class="logo">@ Асан Шабатыров</div>
 			</div>
 		</footer>
@@ -27,49 +39,94 @@ body {
 			padding: 0px 200px;
 			padding-top: 30px;
 			
+			& .container-footer {
+				display: flex;
+				justify-content: space-between;
+
+				& .links-pages {
+	
+					& > a {
+						margin-bottom: 30px;
+						color: rgb(255, 255, 255);
+						display: block;
+						width: 150px;
+						font-size: 15px;
+						white-space: nowrap; 
+						border-radius: 30px;
+						position: relative;
+						
+						@media (max-width: 500px) {
+							margin-bottom: 20px;
+							width: 80px;
+							font-size: 13px;
+		
+						}
+					
+						&::before {
+							content: '';
+							background: #fff;
+							width: 0px;
+							height: 1.5px;
+							position: absolute;
+							bottom: -2px;
+							transition: width 0.5s;
+						}
+						&:hover::before {
+							width: 100px; 
+						}
+		
+						&:hover {
+							animation: bottomLine 1s forwards; 
+						}
+					}
+				}
+
+				& .contacts {
+					margin-left: 50px;
+					& > ul {
+
+						& > label {
+							color: rgb(114, 114, 114);
+						}	
+
+						& > li {
+							margin-top: 10px;
+							
+							& > a {
+								color: rgb(0, 81, 255);
+								
+								&:hover {
+									text-decoration: underline;
+								}
+							}
+						}
+						
+						@media (max-width: 500px) {
+
+							& > label {
+								font-size: 14px;
+								color: rgb(114, 114, 114);
+							}	
+							
+							& > li {
+								margin-top: 5px;
+								font-size: 13px;
+								
+							}
+		
+						}
+					}
+				}
+			}
 			@media (max-width: 500px) {
-				padding: 0px 50px;
+				padding: 0px 10px;
 				padding-top: 20px;
 			}
 			@media (max-width: 800px) {
 				padding: 0px 50px;
 				padding-top: 20px;
 			}
-			
-			& > a {
-				margin-bottom: 30px;
-				color: rgb(255, 255, 255);
-				display: block;
-        width: 150px;
-				font-size: 15px;
-        white-space: nowrap; 
-        border-radius: 30px;
-				position: relative;
-				
-				@media (max-width: 500px) {
-					margin-bottom: 20px;
-					width: 80px;
-					font-size: 13px;
 
-				}
-			
-				&::before {
-					content: '';
-					background: #fff;
-					width: 0px;
-					height: 1.5px;
-					position: absolute;
-					bottom: -2px;
-					transition: width 0.5s;
-				}
-				&:hover::before {
-					width: 100px; 
-				}
-
-				&:hover {
-					animation: bottomLine 1s forwards; 
-				}
-			}
 
 			& .logo {
 				padding-bottom: 10px;

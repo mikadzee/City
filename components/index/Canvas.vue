@@ -55,7 +55,6 @@ body {
   left: 0;
   width: 100%;
   font-size: 8vw;
-  color: rgb(108, 108, 230);
   font-weight: 800;
   text-transform: uppercase;
   transition: margin 0.4s ease;

@@ -3,8 +3,8 @@
 		<div class="about-body">
 
 			<div class="about-info" data-aos="fade-up">
-				<img src="@/assets/images/norilsk-industry-4.jpeg" alt="">
-				<p><span>Норильск</span> - это один из самых крупных городов в Арктической зоне.Известен своими природными ресурсами и является центром одной из крупнейших в мире горнодобывающих и металлургических компаний — Норникеля.</p>
+				<img src="@/assets/images/photo_2024-04-04_18-55-08.jpg" alt="">
+				<p><span>Норильск</span> - это город в Красноярском крае России, расположенный к югу от западного полуострова Таймыр, примерно в 90 км к востоку от реки Енисей и в 1500 км к северу от Красноярска. Норильск находится в 300 км к северу от Северного Полярного Круга и в 2400 км от Северного Полюса. Это самый северный город мира с численностью населения более 150 тысяч человек. Норильск является одним из крупнейших в мире центров добычи никеля и палладия. Кроме того, здесь добывают медь, кобальт, платину и другие драгоценные и цветные металлы. Экономика города во многом зависит от деятельности крупнейшего в городе предприятия - Норильского никелевого комбината.</p>
 			</div>
 
 			
@@ -14,11 +14,16 @@
 				<div class="municipal-services-content">
 					
 					<div class="municipal-service" v-for="info in listServicesSity" data-aos="fade-up">
+					
 						<div class="municipal-service-info">
 							<h2>{{ info.title }}</h2>
 						</div>
 
 						<img :src="info.icon" alt="">
+						
+						<div class="municipal-service-description">
+							<p>{{ info.description }}</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -128,7 +133,12 @@
 						</div>
 
 						<img :src="work.icon" alt="111111111111111" />
+						
+						<div class="work-description">
+							<p>{{ work.description }}</p>
+						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -137,23 +147,31 @@
 <style lang="less" scoped>
 .about {
 	& .about-body {
-		padding: 50px 0px;
+		padding: 50px 100px;
 		
-		// @media (max-width: 1000px) {
-		// 	position: relative;
-		// 	left: 50%;
-		// 	top: 50%;
+		@media (max-width: 1000px) {
+			padding: 0px 0px;
 			
-		// }
+		}
 		& .about-info {
 			margin: 50px auto;
+			align-items: center;
 			display: flex;
+			
+			@media (max-width: 1000px) {
+				margin: 20px auto;
+				
+			}
 			
 			@media (max-width: 1200px) {
 			}
 			& > img {
 				width: 40vw;
-				height: 40vw;
+				height: 31vw;
+
+				@media (max-width: 1000px) {
+					display: none;					
+				}
 				
 				// @media (max-width: 1200px) {
 				// 	width: 100vh;
@@ -173,6 +191,7 @@
 				& > span {
 					font-size: 34px;
 				  font-weight: bold;
+					
 				}
 				
 				// @media (max-width: 1200px) {
@@ -195,17 +214,20 @@
 			& .municipal-services-content {
 				display: flex;
 				flex-wrap: wrap;
-
+				justify-content: center;
+				gap: 10px;
+				
 				& .municipal-service {
 					padding: 10px 0px;
 					margin: 10px 0px;
 					margin-bottom: 20px;
+					width: 300px;
 					display: flex;
 					border-radius: 5px;
 					background: #3735cb16;
 					border: 1px solid #ffffff0e;
 					box-shadow: none;
-					cursor: pointer;
+					cursor: default;
 					transition: all 0.5s ease;
 					
 					& .municipal-service-info {
@@ -214,6 +236,11 @@
 							padding: 10px;
 							font-size: 1rem;
 							min-width: 150px;
+
+							@media (max-width: 600px) {
+								font-size: 13px;
+								
+							}
 						}
 
 					}
@@ -221,15 +248,43 @@
 					& > img {
 						width: 100px;
 						height: 100px;
+
+						@media (max-width: 600px) {
+							width: 50px;
+							height: 50px;
+						}
 					}
 
+					& .municipal-service-description {
+						padding: 10px;
+						position: absolute;
+						transform: translate(0px, 100px);
+						background: #000;
+						max-width: 300px;
+						font-size: 15px;
+						opacity: 0;
+						transition: all 0.5s ease;
+
+						@media (max-width: 600px) {
+							font-size: 10px;
+							transform: translate(0px, 50px);
+							
+						}
+					}
+					
 					&:hover {
-						box-shadow: 0px 1px 10px #ffffff78;
+						
+						& .municipal-service-description {
+							opacity: 1;
+	
+						}
 
 					}
+
 				}
 
 				@media (max-width: 1200px) {
+
 					& .municipal-service {
 						padding: 5px 0px;
 						margin: 10px 0px;
@@ -260,7 +315,7 @@
 				display: flex;
 				border: 1px solid #ffffff54;
 				align-items: center;
-				cursor: pointer;
+				cursor: default;
 				
 				& > h2 {
 					margin-right: auto;					
@@ -317,9 +372,9 @@
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 				
 				& > p {
-					font-size: 16px;
-					line-height: 1.6; // увеличиваем интерлиньяж для лучшей читаемости
 					margin-bottom: 10px;
+					font-size: 16px;
+					line-height: 1.6;
 					padding: 10px;
 				}
 
@@ -333,8 +388,8 @@
 			}
 
 			& .active-content {
-				max-height:500px;
-				transition: all 1s ease;
+				max-height:1100px;
+				transition: all 2s ease;
 			}
 		}
 
@@ -353,6 +408,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: space-between;
+				gap: 10px;
 
 				& .work {
 					padding: 10px 0px;
@@ -360,31 +416,80 @@
 					display: flex;
 					border-radius: 5px;
 					background: #3735cb16;
+					width: 300px;
+					max-height: 500px;
+					min-height: 60px;
 					margin-bottom: 20px;
 					border: 1px solid #ffffff0e;
 					box-shadow: none;
-					cursor: pointer;
+					cursor: default;
 					transition: all 0.5s ease;
+					
+					@media (max-width: 600px) {
+						padding: 0px 0px;
+						margin: 0px 0px;
+						width: 300px;
+						margin-bottom: 10px;
+						border: 1px solid #ffffff0e;
+						box-shadow: none;
+						cursor: default;
+						transition: all 0.5s ease;
+						font-size: 15px;
+					}
 
 					& .work-info {
 						flex-grow: 1;
 						
 						& > h2 {
 							padding: 10px;
-							font-size: 1.0rem;
+							font-size: 1rem;
 							min-width: 150px;
+							
+							@media (max-width: 600px) {
+								font-size: 13px;
+								
+							}
 						}
 
+					}
+
+					& .work-description {
+						padding: 10px;
+						position: absolute;
+						transform: translate(0px, 100px);
+						background: #000;
+						max-width: 300px;
+						font-size: 15px;
+						opacity: 0;
+						transition: all 0.5s ease;
+						
+						
+						@media (max-width: 600px) {
+							font-size: 10px;
+							transform: translate(0px, 50px);
+							
+						}
 					}
 					
 					& > img {
 						width: 100px;
 						height: 100px;
+						
+						@media (max-width: 600px) {
+							width: 50px;
+							height: 50px;
+						}
 					}
 
 					&:hover {
-						box-shadow: 0px 1px 10px #ffffff78;
 
+						& .work-description {
+							opacity: 1;
+							
+							&:hover {
+								opacity: 0;
+							}
+						}
 					}
 				}
 			}

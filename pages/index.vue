@@ -4,9 +4,6 @@
     <indexAbout />
   </main>
   
-  <footer>
-    <Footer />
-  </footer>
 </template>
 
 <style scoped>

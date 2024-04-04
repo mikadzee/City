@@ -2,9 +2,6 @@
   <main>
     <worksVacancy />
   </main>
-  <footer>
-    <Footer></Footer>
-  </footer>
 </template>
 
 

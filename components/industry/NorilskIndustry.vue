@@ -1,9 +1,9 @@
 <template>
 	<section class="industry farro-light">
-		<div class="norilsk-industry-descript">
+		<div class="industry-info">
 			<h2 class="title" data-aos="fade-left">О промышленности Норильска</h2>
 
-			<div class="norilsk-industry-descript-content" data-aos="fade-up">
+			<div class="industry-info-content" data-aos="fade-up">
 				<div class="industry-text" >
 					<p>
 						Промышленность Норильска – это мощный сердцевинный комплекс, который является краеугольным камнем экономики не только самого города, но и всего Красноярского края. Ключевое место занимает Норильский горно-металлургический комбинат, один из крупнейших производителей никеля и палладия в мире. Огромные месторождения этих и других ценных металлов, таких как медь, кобальт и платина, делают Норильск стратегически важным промышленным центром на глобальной арене.
@@ -39,7 +39,7 @@
 
 		<div class="norilsk-industry-main">
 			<div class="norilsk-industry-main-title ">
-				<h2 class="title" data-aos="fade-left">Промышленность Норильска: Жизненная Сила Севера</h2>
+				<h2 class="title" data-aos="fade-left">Факты</h2>
 			</div>
 			<div class="norilsk-industry-main-description" data-aos="fade-up">
 				<div class="fact" v-for="info in factsIndustry" data-aos="fade-up">
@@ -50,38 +50,45 @@
 			</div>
 		</div>
 
-		<div class="norilsk-division">
-			<div class="norilsk-division-title">
-				<h2 class="title" data-aos="fade-left">Норильский дивизион</h2>
+		<div class="nornikel">
+			<div class="nornikel-title">
+				<h2 class="title" data-aos="fade-left">Норникель</h2>
 			</div>
 
-			<div class="norilsk-division-description" data-aos="fade-up">
-				<p>
-					Норильский дивизион — ключевой производственный актив «Норникеля». Он
-					включает в себя полный цикл производства металлов — от добычи руды до
-					отгрузки готовой продукции. Активы расположены в России на полуострове
-					Таймыр, на севере Красноярского края. Норильский дивизион
-					разрабатывает крупнейшие месторождения в портфеле Компании.
-					Транспортное сообщение с другими регионами страны осуществляется по р.
-					Енисей и Северному морскому пути, а также по воздуху.
+			<div class="nornikel-body" data-aos="fade-up">
+				<p class="nornikel-body-title" data-aos="fade-up">
+					«<span>Норильский никель</span>»(Норникель) — лидер горно-металлургической промышленности в России и в мире. Крупнейшие предприятия компании расположены в районе Норильск–Талнах у реки Енисей на севере Сибири.
 				</p>
 
-				<div class="progress2020">
-					<h2 class="progress2020-title">Ключевые показатели 2020 года</h2>
+				<div class="nornikel-body-metal" data-aos="fade-up">
+					<h3>Металлы Норникеля</h3>
 
-					<div class="statistic">
-						<img
-							src="https://nornickel.ru/images/business/assets/norilsk-devision/front-graph-1.svg"
-							alt=""
-						data-aos="fade-up" />
-						<img
-							src="https://nornickel.ru/images/business/assets/norilsk-devision/front-graph-2.svg"
-							alt=""
-						 data-aos="fade-up" />
+					<div class="metals">
+						<div class="metal nikel" data-aos="fade-up">
+							<p>Никель</p>
 
-						<div class="statistic-result" data-aos="fade-left">
-							<p><span>17,5</span>млн т</p>
-							<p>Объем добычи руды</p>
+							<div class="metal-info">
+								<p>Никель используется во многих отраслях промышленности, включая производство нержавеющей стали, сплавов, аккумуляторов и электроники.</p>
+							</div>
+						</div>
+						<div class="metal copper" data-aos="fade-up">
+							<p>Медь</p>
+
+							<div class="metal-info">
+								<p>Медь широко используется в электротехнике, строительстве, производстве транспортных средств и во многих других отраслях.</p>
+							</div>
+						</div>
+						<div class="metal palladium" data-aos="fade-up">
+							<p>Палладий</p>
+							<div class="metal-info">
+								<p>Палладий используется в различных отраслях промышленности, но основное его применение – в автомобильной промышленности.</p>
+							</div>
+						</div>
+						<div class="metal platinum" data-aos="fade-up">
+							<p>Платина</p>
+							<div class="metal-info">
+								<p>Платина используется в автомобильных катализаторах, а также в химической промышленности, медицине, нефтепереработке и ювелирном деле.</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -97,15 +104,24 @@
 	overflow: hidden;
 	font-size: 40px;
 	position: relative;
-
+	
 	&::after {
-		margin-left: 10px;
 		content: '';
+		margin-left: 10px;
 		width: 100%;
 		height: 1px;
 		background: #fff;
 		position: absolute;
 		top: 50%;
+	}
+
+	@media (max-width: 600px) {
+		font-size: 25px;
+		
+	}
+	@media (max-width: 500px) {
+		font-size: 15px;
+		
 	}
 }
 .industry {
@@ -128,10 +144,10 @@
 		}
 	}
 
-	& .norilsk-industry-descript {
+	& .industry-info {
 		overflow: hidden;
 
-		& .norilsk-industry-descript-content {
+		& .industry-info-content {
 			margin: auto;
 			background: #00a6ff;
 			border-radius: 5px;
@@ -179,6 +195,7 @@
 			background-size: cover;
 			background-position: center center;
 			display: flex;
+			flex-wrap: wrap;
 			gap: 30px;
 
 			& .fact {
@@ -201,54 +218,116 @@
 			}
 		}
 	}
+	
+	& .nornikel {
 
-	& .norilsk-division {
-		overflow: hidden;
-		& .norilsk-division-title {
-			display: flex;
-			align-items: center;
+		& .nornikel-title {
+			overflow: hidden;
+			
 		}
-
-		& .norilsk-division-description {
-			padding: 50px 100px;
-			background-image: url('@/assets/images/norilsk-nornikel-division.jpg');
-			background-repeat: no-repeat;
+		
+		& .nornikel-body {
+			padding: 50px;
+			background-image: url("@/assets/images/nornikel-mine.jpg");
+			background-position: center;
 			background-size: cover;
-			background-position: center center;
-
-			& > p {
-				font-size: 25px;
+			
+			@media (max-width: 550px) {
+				padding: 25px;
+				
 			}
 
-			& .progress2020 {
-				margin-top: 100px;
+			& .nornikel-body-title {
+				margin-bottom: 100px;
+				padding: 50px;
+				background-color: #0000008d;
+				backdrop-filter: blur(10px);
+				font-size: 20px;
+				
+				@media (max-width: 550px) {
+					font-size: 15px;
+					
+				}
+				@media (max-width: 480px) {
+					font-size: 15px;
+					
+				}
+			}
 
-				& .progress2020-title {
+			& .nornikel-body-metal {
+				padding: 40px;
+				border-radius: 0px 50px 50px 0px;
+				background-image: url("@/assets/images/nornikel-metals.jpg");
+
+				& > h3 {
+					margin-bottom: 50px;
+					font-size: 22px;
 				}
 
-				& .statistic {
-					margin-top: 30px;
-					margin-left: 50px;
+				& .metals {
 					display: flex;
-					align-items: center;
-					gap: 50px;
-
-					& .statistic-result {
-
+					flex-wrap: wrap;
+					gap: 10px;
+					
+					& .metal {
+						padding: 30px;
+						font-size: 18px;
+						border-radius: 0px 20px 0px 20px;
+						cursor: default;
+						
+						@media (max-width: 500px) {
+							padding: 14px;
+							font-size: 14px;
+							
+						}
+						
 						& > p {
-							display: flex;
-							align-items: center;
-							font-size: 20px;
+							color: #000000;
 
-							& > span {
-								font-size: 64px;
+						}
+
+						& .metal-info {
+							padding: 10px;
+							opacity: 0;
+							position: absolute;
+							margin-top: 40px;
+							transform: translate(-45px, 0px);
+							max-width: 300px;
+							font-size: 15px;
+							background: #a200ff;
+							border-radius: 15px;
+							transition: all 0.5s ease;
+						}
+
+						&:hover {
+							
+							& .metal-info {
+								opacity: 1;
+
+								&:hover {
+									opacity: 0;
+								}
 							}
 						}
+					}
+
+					& .nikel {
+						background: #c5c9c7;
+					}
+					& .copper {
+						background: #b87333;
+					}
+					& .palladium {
+						background: #b1b1b1;
+					}
+					& .platinum {
+						background: #E5E4E2;
 					}
 				}
 			}
 		}
 	}
+	
 }
 </style>
 

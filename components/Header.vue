@@ -46,7 +46,7 @@
 							:style="{
 								color: store.activeLink === 'works' ? '#fff' : '#9CA3AF',
 							}"
-							>Вакансии</NuxtLink
+							>Работа</NuxtLink
 						>
 					</li>
 				</ul>
@@ -84,15 +84,15 @@ onMounted(() => {
   	justify-content: space-between;
 		
 		@media (max-width: 528px) {
-			padding: 0px 0;
 		}
+		
 		@media (max-width: 828px) {
 		}
 		
 		@media (max-width: 1000px) {
-			height: 70px;
-
+			height: 20px;
 		}
+
 		& .header-logo {
 			padding-left: 40px;
 			margin-right: auto;
@@ -120,14 +120,20 @@ onMounted(() => {
 		}
 
 		& .nav {
-
+			padding-right: 40px;
+			
 			@media (max-width: 768px) {
+				padding-right: 10px;
 
 			}
-			padding-right: 40px;
+
 			& .links {
 				display: flex;
 				gap: 30px;
+				
+				@media (max-width: 600px) {
+					gap: 10px;
+				}
 
 				& > li {
 					& > a {
