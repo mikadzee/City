@@ -276,7 +276,10 @@
 						
 						& .municipal-service-description {
 							opacity: 1;
-	
+							
+							&:hover {
+								opacity: 0;
+							}
 						}
 
 					}

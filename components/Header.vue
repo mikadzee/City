@@ -84,14 +84,12 @@ onMounted(() => {
   	justify-content: space-between;
 		
 		@media (max-width: 528px) {
+			height: 35px;
 		}
 		
 		@media (max-width: 828px) {
 		}
 		
-		@media (max-width: 1000px) {
-			height: 20px;
-		}
 
 		& .header-logo {
 			padding-left: 40px;
