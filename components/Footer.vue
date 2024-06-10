@@ -12,7 +12,7 @@
 					<div class="contacts">
 						<ul>
 							<label>Контакты разработчика</label>
-							<li><a href="https://vk.com/sally2008">VK</a></li>
+							<li><a href="https://spaceai.dev/">VK</a></li>
 							<li><a href="https://t.me/owervase">Telegram</a></li>
 						</ul>
 					</div>
