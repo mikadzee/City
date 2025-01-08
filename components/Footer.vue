@@ -12,13 +12,13 @@
 					<div class="contacts">
 						<ul>
 							<label>Контакты разработчика</label>
-							<li><a href="https://vk.com/sally2008">VK</a></li>
+							<li><a href="https://spaceai.dev/">VK</a></li>
 							<li><a href="https://t.me/owervase">Telegram</a></li>
 							<li><a href="../assets/Норильск.pptx">Презентация</a></li>
 						</ul>
 					</div>
 				</div>
-				<div class="logo">@ Асан Шабатыров</div>
+				<div class="logo">@ &&&& &&&&&&&&&</div>
 			</div>
 		</footer>
 	</section>
