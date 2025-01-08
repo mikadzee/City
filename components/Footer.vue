@@ -6,6 +6,7 @@
 					<div class="links-pages">
 						<NuxtLink to="/" @click="store.getLink('index')">Главная</NuxtLink>
 						<NuxtLink to="/industry" @click="store.getLink('industry')">Промышленность</NuxtLink>
+						<NuxtLink to="/attractions" @click="store.getLink('attractions')">Достопримечательности</NuxtLink>
 						<NuxtLink to="/districts" @click="store.getLink('districts')">Районы Норильска</NuxtLink>
 						<NuxtLink to="/works" @click="store.getLink('works')">Работы</NuxtLink>
 					</div>

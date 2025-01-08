@@ -68,7 +68,7 @@ onMounted(() => {
   	justify-content: space-between;
 		
 		@media (max-width: 528px) {
-			height: 35px;
+			height: 40px;
 		}
 		
 		@media (max-width: 828px) {
@@ -126,7 +126,7 @@ onMounted(() => {
 					& > a {
 						
 						@media (max-width: 600px) {
-							font-size: 10px;
+							font-size: 12px;
 						}
 					}
 				}
