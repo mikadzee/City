@@ -6,7 +6,6 @@
 				<a v-for="info in randomWork" :href="info.url" class="work-link" target="_blank">
 					<div class="work-body">
 						<h2 class="work-title">{{ info.work }}</h2>
-
 						<p class="work-salary">{{ info.salary }}</p>
 					</div>
 				</a>
@@ -16,11 +15,9 @@
 
 		<div class="expensive-works">
 			<h2>Высокооплачиваемые работы в Норильске</h2>
-
 			<div class="body-expensive-works">
 				<a class="work" v-for="info in expensiveWorks" target="_blank" :href="info.url" >
 					<h2>{{ info.work }}</h2>
-
 					<h4>{{ info.salary }}</h4>
 				</a>
 			</div>

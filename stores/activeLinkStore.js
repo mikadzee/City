@@ -21,6 +21,9 @@ export const useActiveLinkStore = defineStore({
 				case '/works':
 					this.activeLink = 'works'
 					break
+				case '/attractions':
+					this.activeLink = 'attractions'
+					break
 				default:
 					this.activeLink = 'index'
 			}
