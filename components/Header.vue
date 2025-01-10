@@ -127,7 +127,7 @@ onMounted(() => {
 					& > a {
 						
 						@media (max-width: 600px) {
-							font-size: 12px;
+							font-size: 11px;
 						}
 					}
 				}

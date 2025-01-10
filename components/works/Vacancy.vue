@@ -34,7 +34,7 @@
     
   }
 	@media (max-width: 500px) {
-    padding: 50px 00px;
+    padding: 50px 0px;
     
   }
 

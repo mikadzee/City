@@ -21,7 +21,8 @@
     & .img-block {
       & > img {
         border-radius: 25px;
-        width: 100vh;
+          height: 550px;
+            width: 550px;
       }
     }
     
@@ -46,8 +47,8 @@
         & > img {
           margin-left: 40px;
           border-radius: 15px;
-          width: 50vh;
-          height: 50vh;
+          width: 250px;
+          height: 250px;
         }
       }
       
