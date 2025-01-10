@@ -41,6 +41,7 @@
 
 <script setup>
 import { useActiveLinkStore } from '@/stores/activeLinkStore'
+
 const store = useActiveLinkStore()
 
 onMounted(() => {
