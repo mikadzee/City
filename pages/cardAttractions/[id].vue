@@ -7,6 +7,7 @@
       <div class="info-texts">
         <h1>{{ attractionInfo.title }}</h1>
         <p>{{ attractionInfo.description }}</p>
+        <button class="btn" @click="$router.go(-1)">Назад</button>
       </div>
     </section>
 
@@ -38,6 +39,26 @@
         margin-top: 10px;
         font-size: 20px;
       }
+
+      & .btn {
+        width: 155px;
+        margin-left: 80%;
+        margin-top: 30px;
+        height: 44px;
+        border: 3px solid #3a7999;
+        background: #ffffff;
+        font-size: 19px;
+        color: #0a0a0a;
+        transition: all 0.5s;
+        cursor: pointer;
+
+        &:hover {
+          border: 3px dotted #3a7999;
+          color: #ffffff;
+          background: rgba(0, 0, 0, 0);
+        }
+      }
+
     }
     @media (max-width: 500px) {
       padding: 65px 0px;
