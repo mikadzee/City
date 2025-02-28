@@ -130,25 +130,24 @@ onMounted(() => {
 	}
 	@media (max-width: 460px) {
 		& .header-body {
-			padding: 0px ;
+			padding: 5px 10px;
 			backdrop-filter: blur(1px);
 			height: 60px;
-
 			& .header-logo {
-					display: none;
-
+				display: none;
+				
 				&>a {
 					&>img {
 					}
 				}
 			}
-
+			
 			& .nav {
-				padding-right: 0px;
-
+				
 				& .links {
 					display: flex;
-					gap: 10px;
+					flex-wrap: wrap;
+					gap: 15px;
 
 					&>li {
 						&>a {
