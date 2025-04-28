@@ -130,7 +130,7 @@ onMounted(() => {
 	}
 	@media (max-width: 460px) {
 		& .header-body {
-			padding: 5px 10px;
+			padding: 5цpx 10px;
 			backdrop-filter: blur(1px);
 			height: 60px;
 			& .header-logo {

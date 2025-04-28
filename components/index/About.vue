@@ -659,7 +659,7 @@
 				}
 
 				& .active-content {
-					max-height: 1100px;
+					max-height: 5000px;
 					transition: all 2s ease;
 				}
 			}
@@ -927,7 +927,7 @@
 				}
 
 				& .active-content {
-					max-height: 1100px;
+					max-height: 5000px;
 					transition: all 2s ease;
 				}
 			}
