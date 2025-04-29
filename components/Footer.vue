@@ -19,7 +19,7 @@
 						</ul>
 					</div>
 				</div>
-				<div class="logo">@ &&&& &&&&&&&&&</div>
+				<div class="logo">@ Асан Шабатыров</div>
 			</div>
 		</footer>
 	</section>
